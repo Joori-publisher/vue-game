@@ -16,12 +16,12 @@ new Vue({
     watch: {
         count: function (newVal) {
             if (newVal === 0) {
-                let number = Math.random()
-                if (number < 0.33) {
+                let number = Math.floor(Math.random()*10)%3
+                if (number === 0) {
                     this.comChoice = 'scissor'
-                } else if (number < 0.66) {
+                } else if (number === 1) {
                     this.comChoice = 'rock'
-                } else {
+                } else if (number === 2){
                     this.comChoice = 'paper'
                 }
 
