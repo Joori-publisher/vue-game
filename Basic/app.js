@@ -99,7 +99,10 @@ new Vue({
             } else{
                 let countDown = setInterval(() => {
                     this.count--
+
+                    // 반복 명령 종료
                     if (this.count === 0) {
+                        // 함수 clearInterval로 0일때 반복 종료 
                         clearInterval(countDown)
                     }
                 }, 1000)
